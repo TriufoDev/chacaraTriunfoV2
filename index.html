@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO e Meta Tags -->
+    <title>Chácara Triunfo | Chácara em São José dos Campos - Zona Norte</title>
+    <meta name="description" content="Aluga-se Chácara em São José dos Campos – Zona Norte. 4 quartos, piscina, salão de festas, lago para pesca e muito mais. A apenas 7km do centro.">
+    <meta name="keywords" content="aluguel de chácara sjc, sítio zona norte sjc, chácara para temporada, salão de festas, sítio com piscina sjc">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Chácara Triunfo">
+    <link rel="canonical" href="https://www.sitiotriunfo.com.br/">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitiotriunfo.com.br/">
+    <meta property="og:title" content="Chácara Triunfo - Lazer e Natureza">
+    <meta property="og:description" content="Venha viver dias de tranquilidade junto à natureza, a apenas 7 km do centro de SJC!">
+    <meta property="og:image" content="assents/WhatsApp Image 2026-02-24 at 08.12.13 (1).jpeg">
+
+    <link rel="manifest" href="/manifest.json">
+    <!-- Configurações para parecer App Nativo (iOS) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2E8B57">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_ID_AQUI"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SEU_ID_AQUI');
+    </script>
+
+    <!-- Schema.org (SEO Local Avançado) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Chácara Triunfo",
+      "image": "assents/WhatsApp Image 2026-02-24 at 08.10.18.jpeg",
+      "description": "Sítio para aluguel de temporada e finais de semana com piscina e churrasqueira.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Estrada Joaquim de Oliveira Prisco, 1850 - Buquirinha",
+        "addressLocality": "São José dos Campos",
+        "addressRegion": "SP",
+        "postalCode": "12200-000",
+        "addressCountry": "BR"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Tailwind CSS (Via CDN para desenvolvimento rápido - Recomenda-se build local para produção) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <!-- Configurações Personalizadas do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nature-green': '#2E8B57',
+                        'deep-blue': '#1E3A8A',
+                        'sand': '#F4F1EA',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animações Personalizadas */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #F4F1EA; /* Cor Sand do tema */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Personalização do Swiper (Carrossel) */
+        .swiper-button-next, .swiper-button-prev { color: #2E8B57 !important; }
+        .swiper-pagination-bullet-active { background: #2E8B57 !important; }
+        .swiper-slide { height: auto; }
+
+        /* Personalização do GLightbox */
+        .goverlay {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .gslide-description { background: none; text-align: center; padding: 15px 0; color: white; }
+        
+        /* Ajuste para a imagem ocupar a tela toda sem ultrapassar (Responsivo) */
+        .gslide-image img {
+            max-height: 95vh !important; /* Garante que cabe na altura */
+            max-width: 100vw !important; /* Garante que cabe na largura */
+            object-fit: contain !important; /* Mantém a proporção sem cortar */
+        }
+        /* Botões de navegação e fechar do GLightbox */
+        .gbtn {
+            background: rgba(0, 0, 0, 0.5);
+            margin: 5px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-sand antialiased pb-20 md:pb-0">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-center flex flex-col items-center justify-center animate-pulse">
+            <i class="fas fa-leaf text-6xl text-nature-green mb-4"></i>
+            <h1 class="text-4xl md:text-5xl font-bold text-nature-green tracking-wider">Chácara Triunfo</h1>
+            <p class="text-gray-500 mt-2 text-lg tracking-widest uppercase">Seu refúgio na natureza</p>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5512991489382?text=Olá! Gostaria de saber mais sobre as datas disponíveis na Chácara Triunfo." 
+       target="_blank"
+       class="fixed bottom-24 md:bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all z-50 hover:scale-110 animate-bounce"
+       aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Header / Menu Fixo -->
+    <header class="fixed w-full top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-nature-green tracking-wide">
+                <i class="fas fa-leaf mr-2"></i>Chácara Triunfo
+            </div>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-nature-green transition">Início</a>
+                <a href="#sobre" class="hover:text-nature-green transition">A Chácara</a>
+                <a href="#comodidades" class="hover:text-nature-green transition">Estrutura</a>
+                <a href="galeria.html" class="hover:text-nature-green transition">Galeria</a>
+                <a href="#localizacao" class="hover:text-nature-green transition">Localização</a>
+                <a href="#contato" class="bg-nature-green text-white px-5 py-2 rounded-full hover:bg-green-700 transition shadow-md">Reservar</a> 
+                <!-- Botão de Instalação PWA (Desktop) -->
+                <button id="install-pwa-btn" class="hidden bg-deep-blue text-white px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-md ml-4">
+                    <i class="fas fa-download mr-2"></i> Instalar App
+                </button>
+            </nav>
+
+            <!-- Menu Mobile Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-nature-green focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-3 px-6 hover:bg-gray-50">Início</a>
+            <a href="#sobre" class="block py-3 px-6 hover:bg-gray-50">A Chácara</a>
+            <a href="#comodidades" class="block py-3 px-6 hover:bg-gray-50">Estrutura</a>
+            <a href="galeria.html" class="block py-3 px-6 hover:bg-gray-50">Galeria</a>
+            <a href="#contato" class="block py-3 px-6 text-nature-green font-bold">Reservar Agora</a>
+            <!-- Botão de Instalação PWA (Mobile) -->
+            <button id="install-pwa-btn-mobile" class="hidden block py-3 px-6 text-deep-blue font-bold text-left w-full hover:bg-gray-50">
+                <i class="fas fa-download mr-2"></i> Instalar App
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. Página Inicial (Hero) -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/2.jpeg');">
+        <div class="text-center text-white px-4 fade-in-section">
+            <h1 class="text-3xl md:text-6xl font-bold mb-4 drop-shadow-lg leading-tight">Aluga-se Chácara em São José dos Campos – Zona Norte</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">Venha viver dias de tranquilidade junto à natureza, a apenas 7 km do centro de SJC!</p>
+            <a href="#contato" class="bg-nature-green hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full text-lg transition transform hover:scale-105 shadow-xl inline-flex items-center">
+                <i class="far fa-calendar-check mr-2"></i> Reservar Agora
+            </a>
+        </div>
+        
+        <!-- Destaques Rápidos -->
+        <div class="absolute bottom-0 w-full bg-white/90 backdrop-blur py-4 hidden md:block">
+            <div class="container mx-auto flex justify-around text-nature-green font-semibold">
+                <span><i class="fas fa-swimming-pool mr-2"></i> Piscina</span>
+                <span><i class="fas fa-fish mr-2"></i> Lago de Pesca</span>
+                <span><i class="fas fa-fire mr-2"></i> Fogão a Lenha</span>
+                <span><i class="fas fa-music mr-2"></i> Salão de Festas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Sobre a Chácara -->
+    <section id="sobre" class="py-20 container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12 fade-in-section">
+            <div class="md:w-1/2">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.16.jpeg" alt="Chácara Triunfo Área Externa" class="rounded-2xl shadow-2xl hover:scale-[1.02] transition duration-500" loading="lazy">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-nature-green mb-6">Bem-vindo à Chácara Triunfo</h2>
+                <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                    Espaço ideal para descanso em família, confraternizações, aniversários ou simplesmente para sair da rotina e aproveitar momentos especiais em meio à natureza.
+                </p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    Localizado na Zona Norte de São José dos Campos, oferecemos uma estrutura completa para o seu lazer.
+                </p>
+                <ul class="space-y-2 text-gray-700">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Ambiente familiar</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Privacidade total</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Contato com a natureza</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Estrutura / Comodidades -->
+    <section id="comodidades" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center fade-in-section">
+            <h2 class="text-3xl font-bold text-nature-green mb-12">Nossa Estrutura</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <!-- Item -->
+                <div class="p-6 rounded-xl bg-gray-50 hover:bg-green-50 transition shadow-sm hover:shadow-md group">
+                    <i class="fas fa-swimming-pool text-4xl text-nature-green mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Piscina</h3>
+                </div>
+                <!-- Item -->
+                <div class="p-6 rounded-xl bg-gray-50 hover:bg-green-50 transition shadow-sm hover:shadow-md group">
+                    <i class="fas fa-utensils text-4xl text-nature-green mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">2 Cozinhas Grandes</h3>
+                </div>
+                <!-- Item -->
+                <div class="p-6 rounded-xl bg-gray-50 hover:bg-green-50 transition shadow-sm hover:shadow-md group">
+                    <i class="fas fa-bed text-4xl text-nature-green mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">4 Quartos Amplos</h3>
+                </div>
+                <!-- Item -->
+                <div class="p-6 rounded-xl bg-gray-50 hover:bg-green-50 transition shadow-sm hover:shadow-md group">
+                    <i class="fas fa-fire text-4xl text-nature-green mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Fogão a Lenha</h3>
+                </div>
+                <!-- Item -->
+                <div class="p-6 rounded-xl bg-gray-50 hover:bg-green-50 transition shadow-sm hover:shadow-md group">
+                    <i class="fas fa-car text-4xl text-nature-green mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Estacionamento</h3>
+                </div>
+                <!-- Item -->
+                <div class="p-6 rounded-xl bg-gray-50 hover:bg-green-50 transition shadow-sm hover:shadow-md group">
+                    <i class="fas fa-music text-4xl text-nature-green mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold">Salão de Festas</h3>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <a href="galeria.html" class="inline-block bg-nature-green text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-lg">
+                    <i class="fas fa-images mr-2"></i> Ver Galeria de Fotos Completa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-20 bg-nature-green text-white">
+        <div class="container mx-auto px-6 text-center fade-in-section">
+            <h2 class="text-3xl font-bold mb-12">O que dizem nossos hóspedes</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic mb-4">"Lugar incrível! A piscina é maravilhosa e a casa super equipada. Voltaremos com certeza."</p>
+                    <h4 class="font-bold">- Ana Silva</h4>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic mb-4">"Perfeito para descansar. O atendimento foi excelente desde a reserva."</p>
+                    <h4 class="font-bold">- Carlos Souza</h4>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                    <div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic mb-4">"Limpeza impecável e localização fácil de achar. Recomendo para famílias."</p>
+                    <h4 class="font-bold">- Mariana Costa</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5, 6 & 7. Reservas, Localização e Contato -->
+    <section id="contato" class="py-20 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 fade-in-section">
+            
+            <!-- Formulário -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h2 class="text-3xl font-bold text-nature-green mb-6">Faça sua Reserva</h2>
+                <p class="mb-6 text-gray-600">Preencha o formulário e entraremos em contato via WhatsApp para confirmar a disponibilidade.</p>
+                
+                <form id="bookingForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Nome Completo</label>
+                        <input type="text" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nature-green focus:ring focus:ring-nature-green focus:ring-opacity-50 p-3 bg-gray-50" required>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Check-in</label>
+                            <input type="date" id="checkin" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 bg-gray-50" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Check-out</label>
+                            <input type="date" id="checkout" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 bg-gray-50" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Quantidade de Pessoas</label>
+                        <input type="number" id="guests" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 bg-gray-50" min="1" max="20">
+                    </div>
+                    <button type="submit" class="w-full bg-nature-green text-white font-bold py-3 px-4 rounded-lg hover:bg-green-700 transition flex justify-center items-center">
+                        <i class="fab fa-whatsapp mr-2"></i> Solicitar Orçamento
+                    </button>
+                </form>
+            </div>
+
+            <!-- Localização e Infos -->
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h2 class="text-3xl font-bold text-nature-green mb-6">Localização</h2>
+                    <p class="text-gray-600 mb-4"><i class="fas fa-map-pin text-nature-green mr-2"></i> Estrada Joaquim de Oliveira Prisco, 1850 - Buquirinha, São José dos Campos - SP</p>
+                    <img src="assents/WhatsApp Image 2026-02-24 at 08.12.14 (3).jpeg" alt="Localização Chácara Triunfo" class="rounded-2xl shadow-lg mb-6 w-full h-48 object-cover">
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-64 mb-6">
+                        <!-- Mapa Incorporado (Placeholder) -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0!2d-46.6!3d-23.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMwJzAwLjAiUyA0NsKwMzYnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" class="text-nature-green font-semibold hover:underline"><i class="fas fa-map-marker-alt mr-2"></i> Ver rota no Google Maps</a>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Contatos</h3>
+                    <p class="flex items-center mb-2 text-gray-600"><i class="fas fa-phone-alt w-8 text-nature-green"></i> (12) 99148-9382</p>
+                    <p class="flex items-center mb-2 text-gray-600"><i class="fas fa-envelope w-8 text-nature-green"></i> contato@sitiotriunfo.com.br</p>
+                    <p class="flex items-center text-gray-600"><i class="fab fa-instagram w-8 text-nature-green"></i> @sitiotriunfo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; 2023 Chácara Triunfo. Todos os direitos reservados.</p>
+            <p class="mb-4 text-sm text-gray-400">
+                <a href="termos.html" class="hover:text-nature-green transition underline">Termos e Condições de Uso</a>
+            </p>
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" class="hover:text-nature-green transition"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-nature-green transition"><i class="fab fa-facebook text-2xl"></i></a>
+            </div>
+            <div class="border-t border-gray-800 pt-6">
+                <p class="text-xs text-gray-500">Desenvolvido por <a href="https://mateustriunfo.netlify.app/" target="_blank" class="text-nature-green font-bold hover:underline">triunfo.dev</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Scripts Personalizados -->
+    <script src="script.js"></script>
+
+    <!-- Barra de Navegação Inferior (Mobile App Style) -->
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center py-3 z-50 md:hidden shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <a href="#home" class="flex flex-col items-center text-gray-500 hover:text-nature-green transition group">
+            <i class="fas fa-home text-xl mb-1 group-hover:scale-110 transition"></i>
+            <span class="text-xs font-medium">Início</span>
+        </a>
+        <a href="galeria.html" class="flex flex-col items-center text-gray-500 hover:text-nature-green transition group">
+            <i class="fas fa-images text-xl mb-1 group-hover:scale-110 transition"></i>
+            <span class="text-xs font-medium">Fotos</span>
+        </a>
+        <a href="#localizacao" class="flex flex-col items-center text-gray-500 hover:text-nature-green transition group">
+            <i class="fas fa-map-marker-alt text-xl mb-1 group-hover:scale-110 transition"></i>
+            <span class="text-xs font-medium">Local</span>
+        </a>
+        <a href="#contato" class="flex flex-col items-center text-nature-green font-bold transition group">
+            <div class="bg-nature-green/10 p-2 rounded-full -mt-6 border-4 border-white shadow-sm">
+                <i class="fas fa-calendar-check text-xl"></i>
+            </div>
+            <span class="text-xs mt-1">Reservar</span>
+        </a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos | Chácara Triunfo</title>
+    <meta name="description" content="Veja as fotos da Chácara Triunfo em São José dos Campos. Piscina, salão de festas, quartos e muito mais.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configurações para parecer App Nativo (iOS) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nature-green': '#2E8B57',
+                        'deep-blue': '#1E3A8A',
+                        'sand': '#F4F1EA',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .swiper-button-next, .swiper-button-prev { color: #2E8B57 !important; }
+        .swiper-pagination-bullet-active { background: #2E8B57 !important; }
+        .gslide-image img { max-height: 95vh !important; max-width: 100vw !important; object-fit: contain !important; }
+        /* Botões de navegação e fechar do GLightbox */
+        .gbtn {
+            background: rgba(0, 0, 0, 0.5);
+            margin: 5px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-sand antialiased pb-20 md:pb-0">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-nature-green tracking-wide">
+                <a href="index.html"><i class="fas fa-leaf mr-2"></i>Chácara Triunfo</a>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="hover:text-nature-green transition">Voltar ao Início</a>
+                <a href="index.html#contato" class="bg-nature-green text-white px-5 py-2 rounded-full hover:bg-green-700 transition shadow-md">Reservar</a>
+            </nav>
+            <!-- Menu Mobile Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-nature-green focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block py-3 px-6 hover:bg-gray-50">Voltar ao Início</a>
+            <a href="index.html#contato" class="block py-3 px-6 text-nature-green font-bold">Reservar Agora</a>
+        </div>
+    </header>
+
+    <!-- Carrossel Topo -->
+    <section class="pt-24 pb-10">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-nature-green text-center mb-8">Nossa Estrutura</h1>
+            <div class="swiper mySwiper h-[40vh] md:h-[60vh] rounded-2xl shadow-xl overflow-hidden">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <img src="assents/WhatsApp Image 2026-02-24 at 08.10.18.jpeg" class="w-full h-full object-cover" alt="Piscina Chácara Triunfo">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <img src="assents/WhatsApp Image 2026-02-24 at 08.10.16.jpeg" class="w-full h-full object-cover" alt="Área Externa">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <img src="assents/WhatsApp Image 2026-02-24 at 08.10.15.jpeg" class="w-full h-full object-cover" alt="Chácara Triunfo">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Fotos -->
+    <section class="py-10 container mx-auto px-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Galeria Completa</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+            <!-- Fotos da Galeria -->
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.15.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.15.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.16.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.16.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.18.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.18.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.22.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.22.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.22 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.22 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.23.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.23.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.23 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.23 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.23 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.23 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.23 (3).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.23 (3).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.24.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.24.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.24 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.24 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.24 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.24 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.25.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.25.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.25 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.25 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.25 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.25 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.25 (3).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.25 (3).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.26.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.26.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.26 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.26 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.26 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.26 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.26 (3).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.26 (3).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.26 (4).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.26 (4).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.26 (5).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.26 (5).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.26 (6).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.26 (6).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.27.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.27.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.27 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.27 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.27 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.27 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.28.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.28.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.28 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.28 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.28 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.28 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.28 (3).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.28 (3).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.10.29.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.10.29.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.07.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.07.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.04.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.04.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.07 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.07 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.08.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.08.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.09.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.09.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.10.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.10.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.12.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.12.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.12 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.12 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.12 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.12 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.13.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.13.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.13 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.13 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.13 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.13 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.14.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.14.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.14 (1).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.14 (1).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.14 (2).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.14 (2).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.14 (3).jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.14 (3).jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+            <a href="assents/WhatsApp Image 2026-02-24 at 08.12.15.jpeg" class="glightbox group overflow-hidden rounded-lg shadow-md block relative h-64" data-gallery="gallery">
+                <img src="assents/WhatsApp Image 2026-02-24 at 08.12.15.jpeg" alt="Foto" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-3xl"><i class="fas fa-search-plus"></i></div>
+            </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; 2023 Chácara Triunfo. Todos os direitos reservados.</p>
+            <p class="text-xs text-gray-500 mt-4">Desenvolvido por <a href="https://mateustriunfo.netlify.app/" target="_blank" class="text-nature-green font-bold hover:underline">triunfo.dev</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Barra de Navegação Inferior (Mobile App Style) -->
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center py-3 z-50 md:hidden shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <a href="index.html" class="flex flex-col items-center text-gray-500 hover:text-nature-green transition group">
+            <i class="fas fa-home text-xl mb-1 group-hover:scale-110 transition"></i>
+            <span class="text-xs font-medium">Início</span>
+        </a>
+        <a href="#" class="flex flex-col items-center text-nature-green transition group">
+            <i class="fas fa-images text-xl mb-1 group-hover:scale-110 transition"></i>
+            <span class="text-xs font-bold">Fotos</span>
+        </a>
+        <a href="index.html#localizacao" class="flex flex-col items-center text-gray-500 hover:text-nature-green transition group">
+            <i class="fas fa-map-marker-alt text-xl mb-1 group-hover:scale-110 transition"></i>
+            <span class="text-xs font-medium">Local</span>
+        </a>
+        <a href="index.html#contato" class="flex flex-col items-center text-gray-500 hover:text-nature-green font-bold transition group">
+            <div class="bg-gray-100 p-2 rounded-full -mt-6 border-4 border-white shadow-sm group-hover:bg-nature-green/10 group-hover:text-nature-green">
+                <i class="fas fa-calendar-check text-xl"></i>
+            </div>
+            <span class="text-xs mt-1">Reservar</span>
+        </a>
+    </nav>
+</body>
+</html>
